@@ -146,33 +146,33 @@ $fName = Read-Host "Enter your first name"
 $lName = Read-Host "Enter your last name"
 Write-Host "Good Morning! $fname $lName, nice to meet you."
 
-Write-Host "13) Select-Object"
+Write-Host "18) Select-Object"
 Get-Process | Select-Object -Property ProcessName, Id, WS -Last 5
 "a", "b", "a", "c", "b", "a", "c", "A" | Select-Object -Unique
 
-Write-Host "14) Sort-Object"
+Write-Host "19) Sort-Object"
 Get-Process | Sort-Object -Property WS | Select-Object -Last 5
 "B", "a", "b", "a", "c", "b", "a", "c", "A" | Sort-Object
 
-Write-Host "15) Print a warning message: Do Not Touch!"
+Write-Host "20) Print a warning message: Do Not Touch!"
 Write-Warning "Do Not Touch!"
 
-Write-Host "16) Write-Host"
+Write-Host "21) Write-Host"
 Write-Host (1,3,5,7,9,11) -Separator ", --> " -ForegroundColor White -BackgroundColor DarkRed
 Write-Host "Bye!"
 
-Write-Host "17) Invoke-Item"
+Write-Host "22) Invoke-Item"
 Invoke-Item "demo.txt"
 
-Write-Host "18) Invoke-Expression"
+Write-Host "23) Invoke-Expression"
 $Command = "Get-Process | Select-Object -Last 5"
 $Command
 Invoke-Expression $Command
 
-Write-Host "19) Calculate the time taken by this command: Write-Host Hello World"
+Write-Host "24) Calculate the time taken by this command: Write-Host Hello World"
 Measure-Command { Write-Host "Hello World" }
 
-Write-Host "20) Execute the just last command"
+Write-Host "25) Execute the just last command"
 <#
 COMMAND:
 
@@ -184,11 +184,11 @@ Write-Host "20) Execute the just last command"
 20) Execute the just last command
 #>
 
-Write-Host "21) Print all the commands used in current session"
+Write-Host "26) Print all the commands used in current session"
 <#
 COMMAND:
 
-Get-History
+Get-History -Count 5
 
 OUTPUT:
 
@@ -297,7 +297,7 @@ OUTPUT:
  101        0.009 Write-Host "20) Execute the just last command"
 #>
 
-Write-Host "22) Add the last 5 commands into current history of commands"
+Write-Host "27) Add the last 5 commands into current history of commands"
 <#
 COMMAND:
 
@@ -418,7 +418,7 @@ OUTPUT:
  108        0.002 Get-History -Count 5 | Add-History
 #>
 
-Write-Host "23) Display the culture of OS"
+Write-Host "28) Display the culture of OS"
 Get-Culture
 
 <#
@@ -449,7 +449,7 @@ Count Name                      Group
     2 two                       {two, two}
 5) Measure-Object
 
-LastWriteTime : 13/02/2021 18:46:05
+LastWriteTime : 13/02/2021 18:56:57
 Length        : 0
 Name          : demo.txt
 
@@ -471,12 +471,12 @@ Property          :
 
 7) Compare-Object
 
-LastWriteTime : 13/02/2021 18:46:05
+LastWriteTime : 13/02/2021 18:56:57
 Length        : 0
 Name          : fileDemo1.txt
 
 
-LastWriteTime : 13/02/2021 18:46:05
+LastWriteTime : 13/02/2021 18:56:57
 Length        : 0
 Name          : fileDemo2.txt
 
@@ -501,9 +501,9 @@ SideIndicator : =>
 
 Name           : demo.txt
 Length         : 12
-CreationTime   : 13/02/2021 18:46:05
-LastWriteTime  : 13/02/2021 18:46:05
-LastAccessTime : 13/02/2021 18:46:05
+CreationTime   : 13/02/2021 18:56:57
+LastWriteTime  : 13/02/2021 18:56:57
+LastAccessTime : 13/02/2021 18:56:57
 Mode           : -----
 LinkType       : 
 Target         : 
@@ -524,9 +524,9 @@ VersionInfo    : File:             /home/kmranrg/Documents/kan_work/PowerShell-S
 
 Name           : fileDemo1.txt
 Length         : 15
-CreationTime   : 13/02/2021 18:46:05
-LastWriteTime  : 13/02/2021 18:46:05
-LastAccessTime : 13/02/2021 18:46:05
+CreationTime   : 13/02/2021 18:56:57
+LastWriteTime  : 13/02/2021 18:56:57
+LastAccessTime : 13/02/2021 18:56:57
 Mode           : -----
 LinkType       : 
 Target         : 
@@ -547,9 +547,9 @@ VersionInfo    : File:             /home/kmranrg/Documents/kan_work/PowerShell-S
 
 Name           : fileDemo2.txt
 Length         : 27
-CreationTime   : 13/02/2021 18:46:05
-LastWriteTime  : 13/02/2021 18:46:05
-LastAccessTime : 13/02/2021 18:46:05
+CreationTime   : 13/02/2021 18:56:57
+LastWriteTime  : 13/02/2021 18:56:57
+LastAccessTime : 13/02/2021 18:56:57
 Mode           : -----
 LinkType       : 
 Target         : 
@@ -585,21 +585,20 @@ fileDemo2.txt
 
  NPM(K)    PM(M)      WS(M)     CPU(s)      Id  SI ProcessName
  ------    -----      -----     ------      --  -- -----------
-      0     0.00      29.26       0.38   34734 …22 plugin_host
       0     0.00       0.00       0.00     104   0 pm_wq
       0     1.54       6.55       2.85     831 831 polkitd
-      0     1.79       4.27       0.63    1117 …17 postgres
+      0     1.79       4.27       0.64    1117 …17 postgres
       0     1.98       0.61       0.01    1294 …94 postgres
-      0     1.91       0.11       0.53    1295 …95 postgres
-      0     1.91       0.51       0.49    1296 …96 postgres
-      0     2.01       1.70       0.32    1297 …97 postgres
-      0     1.83       0.23       0.37    1298 …98 postgres
+      0     1.91       0.11       0.54    1295 …95 postgres
+      0     1.91       0.51       0.51    1296 …96 postgres
+      0     2.01       1.70       0.34    1297 …97 postgres
+      0     1.83       0.23       0.39    1298 …98 postgres
       0     2.03       0.89       0.02    1299 …99 postgres
-      0     1.71       9.39   1,666.73    2310 …10 pulseaudio
-      0     0.00     163.31     639.60    7838 …38 pwsh
-      0     0.00      37.34      13.45    7917 …15 pwsh
-      0     0.00      89.79       0.90   35267 …38 pwsh
-      0    15.35      15.92       0.99   12857 820 python3
+      0     1.71       9.39   1,682.96    2310 …10 pulseaudio
+      0     0.00     165.86     664.05    7838 …38 pwsh
+      0     0.00      37.34      13.78    7917 …15 pwsh
+      0     0.00      89.23       0.93   35877 …38 pwsh
+      0    15.35      15.92       1.01   12857 820 python3
 = 12) Print name of all the items presnt in current directory in a column
 demo.txt
 fileDemo1.txt
@@ -622,10 +621,10 @@ World
 Hello
 World
 17) Take first and last name from user and wish Good Morning!
-Enter your first name: Kumar
+Enter your first name: Kumar 
 Enter your last name: Anurag
 Good Morning! Kumar Anurag, nice to meet you.
-13) Select-Object
+18) Select-Object
 
 ProcessName : writeback
 Id          : 43
@@ -644,7 +643,7 @@ WS          : 0
 
 ProcessName : Xorg
 Id          : 2394
-WS          : 45170688
+WS          : 37744640
 
 
 ProcessName : zswap-shrink
@@ -655,12 +654,12 @@ a
 b
 c
 A
-14) Sort-Object
-      0     0.00     242.51   1,087.12    6992 …51 code
-      0    13.39     284.99     814.55    4752 …51 chrome
-      0     6.05     289.55   6,142.16    6920 …51 chrome --type=renderer --field-trial-handle=16915305169441437957,168151303038…
-      0   114.62     331.43      34.20    2801 …37 snap-store
-      0     5.80     469.33   1,157.81   24942 …51 chrome --type=renderer --field-trial-handle=16915305169441437957,168151303038…
+19) Sort-Object
+      0     0.00     243.64   1,192.92    6992 …51 code
+      0     6.04     288.82   6,154.94    6920 …51 chrome --type=renderer --field-trial-handle=16915305169441437957,168151303038…
+      0    13.36     295.22     841.47    4752 …51 chrome
+      0   114.62     331.43      34.27    2801 …37 snap-store
+      0     5.80     485.11   1,192.22   24942 …51 chrome --type=renderer --field-trial-handle=16915305169441437957,168151303038…
 a
 a
 a
@@ -670,38 +669,38 @@ b
 b
 c
 c
-15) Print a warning message: Do Not Touch!
+20) Print a warning message: Do Not Touch!
 WARNING: Do Not Touch!
-16) Write-Host
+21) Write-Host
 1, --> 3, --> 5, --> 7, --> 9, --> 11
 Bye!
-17) Invoke-Item
-18) Invoke-Expression
+22) Invoke-Item
+23) Invoke-Expression
 Get-Process | Select-Object -Last 5
       0     0.00       0.00       0.00      43   0 writeback
-      0     0.44       1.42       1.13    2814 …14 xdg-document-portal
+      0     0.44       1.42       1.19    2814 …14 xdg-document-portal
       0     0.61       0.00       0.00    2603 …03 xdg-permission-store
-      0    17.37      43.08     925.73    2394 …92 Xorg
+      0    17.37      36.00     961.26    2394 …92 Xorg
       0     0.00       0.00       0.00     126   0 zswap-shrink
-19) Calculate the time taken by this command: Write-Host Hello World
+24) Calculate the time taken by this command: Write-Host Hello World
 Hello World
 
-Ticks             : 10428
+Ticks             : 10542
 Days              : 0
 Hours             : 0
 Milliseconds      : 1
 Minutes           : 0
 Seconds           : 0
-TotalDays         : 1.20694444444444E-08
-TotalHours        : 2.89666666666667E-07
-TotalMilliseconds : 1.0428
-TotalMinutes      : 1.738E-05
-TotalSeconds      : 0.0010428
+TotalDays         : 1.22013888888889E-08
+TotalHours        : 2.92833333333333E-07
+TotalMilliseconds : 1.0542
+TotalMinutes      : 1.757E-05
+TotalSeconds      : 0.0010542
 
-20) Execute the just last command
-21) Print all the commands used in current session
-22) Add the last 5 commands into current history of commands
-23) Display the culture of OS
+25) Execute the just last command
+26) Print all the commands used in current session
+27) Add the last 5 commands into current history of commands
+28) Display the culture of OS
 
 Parent                         : en
 LCID                           : 2057
