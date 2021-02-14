@@ -109,7 +109,7 @@ Write-Host "18) Logical AND: "$res
 $res = $a -OR $b
 Write-Host "19) Logical OR: "$res
 
-$res = -NOT-($a -AND $b)
+$res = -NOT($a -AND $b)
 Write-Host "20) Logical NOT: "$res
 
 # Miscellaneous Operators
