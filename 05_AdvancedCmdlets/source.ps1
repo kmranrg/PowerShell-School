@@ -180,8 +180,8 @@ Invoke-History
 
 OUTPUT:
 
-Write-Host "20) Execute the just last command"
-20) Execute the just last command
+Write-Host "25) Execute the just last command"
+25) Execute the just last command
 #>
 
 Write-Host "26) Print all the commands used in current session"
