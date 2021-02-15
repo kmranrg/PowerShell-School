@@ -10,15 +10,15 @@ Write-Host "->"$h.GetType()
 
 # defining a hashtable variable
 Write-Host "3) Defining and printing a hashtable variable"
-$hash = @{ ID=4; Shape="Rectangle"; Color="Red"} # by defining like this order is not fixed
+$hash = @{ID=4; Shape="Rectangle"; Color="Red"} # by defining like this order is not fixed
 $hash
 
 Write-Host "4) Make a hashtable variable with fixed order always"
-$hash = [ordered]@{ ID=4; Shape="Rectangle"; Color="Red"} # now order of elements is fixed
+$hash = [ordered]@{ID=4; Shape="Rectangle"; Color="Red"} # now order of elements is fixed
 $hash
 
 Write-Host "5) Processing Hashtable"
-$hash = @{ ID = 1; Shape = "Square"; Color = "Blue"}
+$hash = @{ID = 1; Shape = "Square"; Color = "Blue"}
 
 write-host("-> Print all hashtable keys")
 $hash.keys
