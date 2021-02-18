@@ -3,7 +3,7 @@ Theory:
 
 1) PowerShell Alias : is another name for the cmdlet or for any command element.
 2) New-Alias : cmdlet is used to create a new alias.
-3) Get-Alias : 
+3) Get-Alias : cmdlet is used to get all the alias present in current session of powershell.
 #>
 
 # Creating Alias
