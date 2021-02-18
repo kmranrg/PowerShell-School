@@ -7,7 +7,7 @@ For running the code: `pwsh filename.ps1`
 Write-Host 'Hello, World!'
 
 # for printing the version of powershell
-$PSVersionTable
+$PSVersionTable # `$PSVersionTable` is a special variable in PowerShell
 
 <#
 OUTPUT:
