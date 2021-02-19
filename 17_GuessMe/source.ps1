@@ -28,7 +28,7 @@ function Get-UserInput ($userInput, $actualAns, $attempt) {
 # let's generate a random no from 1 - 100
 $ans = Get-Random -Minimum 1 -Maximum 101
 
-#let's take an input from user
+# let's take an input from user
 $user = Read-Host "Please guess a number between 1 and 100"
 
 # let's make an attempt variable which will keep track of total no of attempts
